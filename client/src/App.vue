@@ -1,9 +1,19 @@
 <template lang="pug">
-  #app
+  v-app
+    v-container
+      Navbar
+      router-view
 </template>
 
 <script>
-export default {};
+import TableOfUsers from '@/components/TableOfUsers';
+import Navbar from '@/components/Navbar';
+export default {
+  components: {
+    TableOfUsers,
+    Navbar
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>
