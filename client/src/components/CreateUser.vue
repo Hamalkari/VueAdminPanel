@@ -99,6 +99,13 @@ export default {
       this.alert.message = res.message;
       this.alert.status = res.status;
     },
+    clear() {
+      this.$v.$reset();
+      this.form.username = null;
+      this.form.email = null;
+      this.form.password = null;
+      this.form.repeatPass = null;
+    },
     createUser() {
       const isValid = this.validateForm();
       if (isValid) {
